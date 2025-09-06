@@ -1,0 +1,42 @@
+.about {
+  background-color: #f9f9f9;
+  overflow-x: hidden; 
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.heading {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.aboutContent p {
+  font-size: 1.1rem;
+  color: #777777;
+  margin-bottom: 1rem;
+}
+
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  max-width: 450px;
+  height: 350px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+}

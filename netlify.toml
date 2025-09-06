@@ -1,0 +1,14 @@
+# File: netlify.toml
+[build]
+  # Command to build your React app
+  command = "pnpm run build"
+  # Directory where the built frontend is located
+  publish = "dist"
+  # Directory where your serverless function is located
+  functions = "backend"
+
+[[redirects]]
+  # This rule makes your backend available at /api/...
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200

@@ -1,0 +1,44 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle, #fdfdfd, #ffffff);
+}
+
+.heroContainer {
+  max-width: 800px;
+}
+
+.headline {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: #121212;
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  color: #777777;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #121212;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #333;
+}
