@@ -1,4 +1,3 @@
-/* src/components/Navbar.module.css */
 .navbar {
   position: sticky;
   top: 0;
@@ -14,7 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
 }
 
 .logo img {
@@ -87,20 +85,17 @@
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
   .navLinks {
-    display: none;
-  }
-
-  .logo {
-    padding-left: 0;
+    display: none; /* Hide the desktop links */
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* Show the hamburger icon */
   }
 
   .navWrapper {
+    display: block; /* Make the mobile nav wrapper visible */
     position: fixed;
-    top: 60px;
+    top: 60px; /* Adjust based on your navbar height */
     left: -100%;
     width: 100%;
     height: 100vh;
@@ -111,27 +106,26 @@
   }
 
   .navWrapper.open {
-    left: 0;
+    left: 0; /* Slide in when open */
   }
 
-  .mobileNavLinks {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+  .navWrapper .navLinks {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    padding-top: 4rem;
+    gap: 2.5rem;
+    height: 80%; /* Adjust vertical alignment */
   }
 
-  .mobileNavLinks li {
-    margin: 1.5rem 0;
-  }
-
-  .mobileNavLinks a {
+  .navWrapper .navLinks li a {
     font-size: 1.8rem;
     font-weight: bold;
     color: #121212;
+  }
+  
+  .navWrapper .navLinks li a::after {
+    display: none; /* No underline on mobile nav */
   }
 }
