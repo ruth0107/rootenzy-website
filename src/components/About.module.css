@@ -2,60 +2,40 @@
 .about {
   background-color: #f9f9f9;
   padding: 8rem 0;
-  overflow: hidden; /* Changed from overflow-x for better animation containment */
+  overflow: hidden;
 }
 
-/* A more dynamic grid layout */
 .aboutContainer {
   display: grid;
-  grid-template-columns: 1fr 0.9fr; /* Give text slightly more space */
+  grid-template-columns: 1fr 0.9fr;
   gap: 5rem;
   align-items: center;
 }
 
-/* Updated tagline style */
 .tagline {
   font-size: 0.9rem;
-  font-weight: 400; /* Lighter weight to be more subtle */
-  color: #888; /* Softer grey color */
+  font-weight: 400;
+  color: #888;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 0.5rem;
 }
 
-/* Updated heading style */
 .heading {
   text-align: left;
   margin-bottom: 1.5rem;
   font-size: 2.8rem;
-  font-weight: 600; /* A strong but clean bold weight */
-  color: #1a1a1a; /* A near-black for high contrast */
-}
-
-/* Updated paragraph style */
-.aboutContent p {
-  font-size: 1.1rem;
-  color: #666666; /* A softer grey for readability */
-  line-height: 1.8; /* Increased line height for more white space */
-}
-
-.heading {
-  text-align: left;
-  margin-bottom: 1.5rem;
-  font-size: 2.8rem;
-  padding-left: 2rem;
-  
-   /* Slightly larger heading */
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .aboutContent p {
   font-size: 1.1rem;
   color: #666666;
   line-height: 1.8;
-  padding-left: 2rem; /* <-- Add this line */
+  padding-right: 2rem;
 }
 
-/* New wrapper for the image to hold the decorative shape */
 .imageWrapper {
   position: relative;
   display: flex;
@@ -63,7 +43,6 @@
   align-items: center;
 }
 
-/* This is the decorative shape behind the image */
 .imageWrapper::before {
   content: '';
   position: absolute;
@@ -77,38 +56,47 @@
 }
 
 .imageWrapper:hover::before {
-  transform: rotate(-2deg); /* Subtle hover effect */
+  transform: rotate(-2deg);
 }
 
-/* The actual image */
 .aboutImage {
   width: 100%;
   max-width: 450px;
   height: auto;
   border-radius: 12px;
-  position: relative; /* Ensure image is on top of the shape */
+  position: relative;
   z-index: 1;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-/* Updated mobile styles */
+/* --- Mobile Styles --- */
 @media (max-width: 768px) {
   .about {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
+
   .aboutContainer {
-    grid-template-columns: 1fr; /* Stack the columns */
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
+
   .aboutContent {
     text-align: center;
+    order: 2;
   }
+
   .heading {
-    text-align: center; /* Center the heading too */
+    text-align: center;
     font-size: 2.2rem;
+    padding-left: 0;
   }
+
+  .aboutContent p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .imageWrapper {
-    /* On mobile, place the image before the text */
-    order: -1;
+    order: 1;
   }
 }

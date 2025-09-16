@@ -16,13 +16,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem; /* Adds space between the image and the button */
+  gap: 2.5rem;
 }
 
 .heroImage {
   max-width: 70%;
   height: auto;
-  border-radius: 12px; /* Optional: adds nice rounded corners */
+  border-radius: 12px;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
@@ -41,15 +41,20 @@
 .ctaButton:hover {
   background-color: #333;
 }
-/* Add to the end of Hero.module.css */
+
+/* --- Mobile Styles --- */
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
+    min-height: auto;
     padding: 4rem 0;
   }
   
   .heroImage {
-    /* You might want a smaller shadow on mobile */
+    max-width: 90%;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  .contentWrapper {
+    gap: 2rem;
   }
 }

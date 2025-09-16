@@ -1,3 +1,4 @@
+/* src/components/Systems.module.css */
 .systems {
   padding: 6rem 0;
   background-color: #f9f9f9;
@@ -62,15 +63,23 @@
 
 /* --- Mobile Styles --- */
 @media (max-width: 768px) {
+  .systems {
+    padding: 4rem 0;
+  }
+
   .heading {
     font-size: 2.2rem;
   }
+
   .table {
-    grid-template-columns: 1fr; /* Stack columns on mobile */
-    padding: 1rem;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
     gap: 0;
   }
+
   .column:first-child {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 1.5rem;
   }
 }
