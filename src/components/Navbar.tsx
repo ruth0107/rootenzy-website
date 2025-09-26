@@ -26,6 +26,9 @@ const Navbar = () => {
           <span className={`${styles.bar} ${menuOpen ? styles.bar2 : ''}`}></span>
           <span className={`${styles.bar} ${menuOpen ? styles.bar3 : ''}`}></span>
         </div>
+        <div className={styles.navQuote}>
+          Streamline. Scale. Save.
+        </div>
         
         <nav className={`${styles.navWrapper} ${menuOpen ? styles.open : ''}`}>
           <ul className={styles.navLinks}>
